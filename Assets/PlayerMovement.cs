@@ -3,7 +3,8 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float speed = 1;
-
+    public int Score { get; private set; } = 0;
+    
     private int _directionIndex;
     private Rigidbody _rigidbody;
     
@@ -32,5 +33,10 @@ public class PlayerMovement : MonoBehaviour
         var velocity = (_directionIndex == 0 ? Vector3.forward : Vector3.right) * speed;
         velocity.y = _rigidbody.velocity.y;
         _rigidbody.velocity = velocity;
+    }
+
+    public void IncrementScore()
+    {
+        Score += 1;
     }
 }
