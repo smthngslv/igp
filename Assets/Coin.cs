@@ -3,9 +3,9 @@ using UnityEngine;
 
 public class Coin : MonoBehaviour
 {
-    private float rotationSpeed = 5;
-    private float moveSpeed = 2;
-    private float moveAmplitude = 0.7f;
+    public float rotationSpeed = 5;
+    public float moveSpeed = 2;
+    public float moveAmplitude = 0.7f;
 
     private float _initialY;
 
